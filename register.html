@@ -9,34 +9,40 @@
 </head>
 </head>
 <body>
-    <form>
+    <form class="reg-frame">
+        <div class = "form-content">
         <header class="head">
             <h1>REGISTRATION FORM</h1>
         </header>
-        <div>
-            <label for="text">USER ID: </label>
-            <input type="text" id="text" name="text" required>
+        <div class ="input-fields">
+                <label for="text">USER ID: </label>
+                <input type="text" id="text" name="text" required>
             <error-output class="text-error" for="text"></error-output>
         </div>
-        <div>
-            <label for="text">PASWORD: </label>
+        <div class ="input-fields">
+            <label for="text">PASSWORD: </label>
             <input type="password" id="password" name="password" required>
             <error-output class="text-error" for="text"></error-output>
         </div>
-        <div>
+        <div class ="input-fields">
             <label for="text">NAME: </label>
             <input type="text" id="text" name="text" required>
             <error-output class="text-error" for="text"></error-output>
         </div>
-        <div>
+        <div class ="input-fields">
             <label for="text">ADDRESS: </label>
             <input type="password" id="password" name="password" required>
             <error-output class="text-error" for="text"></error-output>
         </div>
-        <div>
+        <div class ="input-fields">
             <label for="text">EMAIL: </label>
             <input type="password" id="password" name="password" required>
             <error-output class="text-error" for="text"></error-output>
         </div>
+        <div class="button">
+            <input value="Submit" onclick="Refresh()" type="button">
+        </div>
+    </div>
+    </form>
 </body>
 </html>
