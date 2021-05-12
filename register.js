@@ -9,8 +9,8 @@
     const nameError = document.querySelector('.name-error');
     const phoneError = document.querySelector('.phone-error');
     const emailError = document.querySelector('.email-error');
-    
-    
+
+
     let userRegex = RegExp('^[a-zA-Z0-9]([._-](?![._-])|[a-zA-Z0-9]){3,18}[a-zA-Z0-9]$');
     let pwdRegex = RegExp('^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]{8,10}$');
     let emailRegex = RegExp("^([a-zA-Z0-9]*[+._-]*[a-zA-Z0-9]+@[a-zA-Z]+.{3}[a-zA-z.]*[a-zA-z]{2})+$");
@@ -19,6 +19,7 @@
     
 
     validationMsg = (test,val,testErr,msg) => {
+        
         if(test.test(val.value)){
             testErr.textContent = " ";
         }
