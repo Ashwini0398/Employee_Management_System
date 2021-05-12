@@ -9,40 +9,41 @@
 </head>
 </head>
 <body>
-    <form class="reg-frame">
+    <form action ="#" class="reg-frame">
         <div class = "form-content">
         <header class="head">
             <h1>REGISTRATION FORM</h1>
         </header>
         <div class ="input-fields">
                 <label for="text">USER ID: </label>
-                <input type="text" id="text" name="text" required>
-            <error-output class="text-error" for="text"></error-output>
+                <input type="text" id="user" name="user" required>
+                <error-output class="user-error" for="text"></error-output>
         </div>
         <div class ="input-fields">
             <label for="text">PASSWORD: </label>
-            <input type="password" id="password" name="password" required>
-            <error-output class="text-error" for="text"></error-output>
+            <input type="password" id="pwd" name="password" required>
+            <error-output class="password-error" for="text"></error-output>
         </div>
         <div class ="input-fields">
             <label for="text">NAME: </label>
-            <input type="text" id="text" name="text" required>
-            <error-output class="text-error" for="text"></error-output>
+            <input type="text" id="f-name" name="name" required>
+            <error-output class="name-error" for="text"></error-output>
         </div>
         <div class ="input-fields">
-            <label for="text">ADDRESS: </label>
-            <input type="password" id="password" name="password" required>
-            <error-output class="text-error" for="text"></error-output>
+            <label for="text">Phone No: </label>
+            <input type="text" id="phoneno" name="phoneno" required>
+            <error-output class="phone-error" for="text"></error-output>
         </div>
         <div class ="input-fields">
             <label for="text">EMAIL: </label>
-            <input type="password" id="password" name="password" required>
-            <error-output class="text-error" for="text"></error-output>
+            <input type="email" id="email" name="email" required>
+            <error-output class="email-error" for="text"></error-output>
         </div>
         <div class="button">
-            <input value="Submit" onclick="Refresh()" type="button">
+            <input value="Submit" onclick="Reload()" type="button">
         </div>
     </div>
     </form>
+    <script src='./register.js'></script>
 </body>
 </html>
