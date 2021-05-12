@@ -1,0 +1,77 @@
+*{
+    box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 70px;
+    background-image: url("./assests/img1.jpg");
+}
+.reg-frame{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    border: 1px solid black;
+    padding: 20px;
+    height: 500px;
+    border-radius: 16px;
+    background-color: wheat;
+}
+
+.head{
+    color: blue;
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-fields{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 50px;
+}
+
+label,input{
+    font-size: 16px;
+}
+
+label{
+    font-weight: bold;
+    width: 30%;
+}
+
+
+input{
+    width: 70%;
+    line-height: 1.5;
+    border: 2px solid black;
+    border-radius: 6px;
+}
+
+input:hover{
+    border: 2px solid red;
+}
+
+.button{
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    
+}
+
+.button input{
+    padding: 8px;
+    border-radius: 10px;
+}
+
+error-output {
+    margin-left: 10px;
+    font-size: 12px;
+    font-style: italic;
+    color: red;
+  }
