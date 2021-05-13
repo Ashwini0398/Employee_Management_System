@@ -41,3 +41,32 @@ img{
     font-weight: bold;
     font-family: emoji;
 }
+
+.main-content{
+    display: flex;
+    width: 100%;
+    background-color: gainsboro;
+}
+.header-text-content{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 15px 25px 15px;
+}
+
+.employee-details{
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.add-button{
+    font-size: 25px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.plus-img{
+    background-color: black;
+    width: 15%;
+    margin-right: 24px;
+}
