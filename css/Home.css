@@ -16,6 +16,7 @@ header{
     justify-content: flex-start;
     align-items: center;
     box-shadow: 9px 10px 17px #888888;
+    margin-bottom: 40px;
 }
 
 img{
@@ -46,6 +47,7 @@ img{
     display: flex;
     width: 100%;
     background-color: gainsboro;
+    margin-top: 41px;
 }
 .header-text-content{
     width: 100%;
@@ -69,4 +71,35 @@ img{
     background-color: black;
     width: 15%;
     margin-right: 24px;
+}
+
+.main-content{
+    width: 100%;
+    overflow: auto;
+    margin: 0 auto;
+}
+
+.table{
+    width: 100%;
+    /* border-collapse: separate;
+    min-width: 800px;
+    border-spacing: 0 30px;*/
+} 
+
+td,th{
+    text-align: left;
+    padding: 5px 8px;
+}
+
+th{
+    background-color: blue;
+    border-radius: 8px;
+    padding: 17px;
+    color: white;
+}
+
+tr:not(:first-child){
+    box-shadow: 10px 8px 19px #88888a;
+    width: 100%;
+    height: 8vh;
 }
