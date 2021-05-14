@@ -48,6 +48,9 @@ img{
     width: 100%;
     background-color: gainsboro;
     margin-top: 41px;
+    border-radius: 13px;
+    overflow: auto;
+    margin: 0 auto;
 }
 .header-text-content{
     width: 100%;
