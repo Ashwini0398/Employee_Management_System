@@ -1,0 +1,28 @@
+{
+  "employee": [
+    {
+      "id": 1,
+      "name": "Ashwini",
+      "department": "Finance",
+      "phoneNo": "7698596877",
+      "email": "ashwini@gmail.com",
+      "address": "Mumbai"
+    },
+    {
+      "name": "Vikrant",
+      "department": "Finance",
+      "phoneNo": "08605532952",
+      "email": "vikrant@gmail.com",
+      "address": "Vashi",
+      "id": 4
+    },
+    {
+      "name": "Mahender",
+      "department": "Sales",
+      "phoneNo": "09172103456",
+      "email": "mahenderkhonde1999@gmail.com",
+      "address": "Kharghar",
+      "id": 5
+    }
+  ]
+}
