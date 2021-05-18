@@ -118,27 +118,6 @@
         validationMsg(emailRegex,email,emailError,"* Enter valid Email");
     }
     
-    // $("button").click(function(){
-    //     $.ajax({
-    //         type : "Post",
-    //         contentType: "application/json",
-    //         data : JSON.stringify({
-    //             "name":"Pooja",
-    //             "department":"Sales",
-    //             "phoneNo":"9687867534",
-    //             "email":"pooja@gmail.com",
-    //             "address":"Gujrat"
-    //         }),
-    //         url: "http://localhost:3000/employee", 
-    //         success: function(result){
-    //         console.log(result);
-    //       },
-    //       error: function(error){
-    //         console.log(error);
-    //       }
-    //     });
-    // });
-
     function getEmpDataFromLocalStorage(){
         if(localStorage.getItem("editEmp") != null)
         {

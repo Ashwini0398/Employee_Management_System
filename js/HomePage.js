@@ -1,10 +1,4 @@
-<<<<<<< HEAD:js/HomePage.js
-var tableData = [];
-let empPayrollList=new Array();
-
-=======
 var tableData = []
->>>>>>> 46ad754da6ae6ee07608c6c1bd87c2569d84e149:js/home.js
 
 $(document).ready(function(){
     if (site_properties.from_local) getEmpDataFromLocalStorage();
@@ -68,8 +62,6 @@ const createInnerHtml = () => {
     reload();
     createInnerHtml();
   };
-<<<<<<< HEAD:js/HomePage.js
-  
 
   const update = (node)=>{
       let empDtl = tableData.filter((element) => {return element.id == node.id;});
@@ -77,9 +69,6 @@ const createInnerHtml = () => {
       localStorage.setItem('editEmp', JSON.stringify(empDtl));
       window.location.replace(site_properties.add_user_page);
 }
-
-=======
-
   function reload(){
     $.ajax({
         type : "Get",
@@ -93,7 +82,4 @@ const createInnerHtml = () => {
         console.log(error);
       }
     });
->>>>>>> 46ad754da6ae6ee07608c6c1bd87c2569d84e149:js/home.js
-
-  
-    
+  }
