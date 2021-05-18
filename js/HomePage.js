@@ -1,7 +1,10 @@
-var tableData = []
+var tableData = [];
+let empPayrollList=new Array();
+
 
 $(document).ready(function(){
-    reload();
+    if (site_properties.from_local) getEmpDataFromLocalStorage();
+    else reload();
 });
 
 function reload(){
@@ -19,7 +22,6 @@ function reload(){
     });
 
   }
-
 const createInnerHtml = () => {
     const headerHtml =
       "<tr><th>Name</th><th>Department</th><th>Phoneno</th><th>Email</th><th>Address</th><th>Actions</th></tr>";
@@ -66,44 +68,11 @@ const createInnerHtml = () => {
 
   const update = (node)=>{
       let empDtl = tableData.filter((element) => {return element.id == node.id;});
-      document.getElementById('empId').value = node.id;
-      document.getElementById('f-name').value = empDtl[0].name;
-      document.getElementById('deprt').value = empDtl[0].department;
-      document.getElementById('phoneno').value = empDtl[0].phoneNo;
-      document.getElementById('email').value = empDtl[0].email;
-      document.getElementById('address').value = empDtl[0].address;
-      document.getElementById('update').style.display = 'block';
-      // document.querySelector("#f-name").value = empDtl[0].name;
-  }
-
-const onCancel = () => {
-  document.getElementById('update').style.display = 'none';
-            reload();
-            // createInnerHtml();
+      console.log(empDtl);
+      localStorage.setItem('editEmp', JSON.stringify(empDtl));
+      window.location.replace(site_properties.add_user_page);
 }
 
- const onSubmit = ()=>{
-   
-        $.ajax({
-          type : "Patch",
-          contentType: "application/json",
-          data : JSON.stringify({
-              "name" : document.getElementById('f-name').value,
-              "department" : document.getElementById('deprt').value,
-              "phoneNo" : document.getElementById('phoneno').value,
-              "email" : document.getElementById('email').value,
-              "address" : document.getElementById('address').value 
-          }),
-          url: "http://localhost:3000/employee/"+document.getElementById('empId').value, 
-          success: function(result){
-            document.getElementById('update').style.display = 'none';
-            reload();
-            createInnerHtml();
-        },
-        error: function(xhr , status , error){
-          console.log(error);
-        }   
-      });
 
- }
   
+    

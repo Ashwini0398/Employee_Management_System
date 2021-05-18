@@ -24,21 +24,10 @@
         "address" : address.value
     }
 
-    // $(document).ready(function(){
-    //     $.ajax({
-    //         type : "Get",
-    //         contentType: "application/json",
-    //         url: "http://localhost:3000/employee", 
-    //         success: function(result){
-    //         tableData = result;
-    //         console.log(tableData);
-    //       },
-    //       error: function(xhr , status , error){
-    //         console.log(error);
-    //       }
-    //     });
-    //   });
-    
+    $(document).ready(function(){
+        getEmpDataFromLocalStorage();
+    });
+
       function onSubmit() {
           console.log(addressError.textContent);
           validationMsg(addressRegex,address,addressError,"* please enter the address ");
@@ -51,7 +40,9 @@
             && validationMsg(phonenoRegex,phoneno,phoneError,"* please enter 10 digit Phone number")
             && validationMsg(nameRegex,fName,nameError,"* Name must start with capital letter")  
             && validationMsg(emailRegex,email,emailError,"* Enter valid Email") ){
-        $.ajax({
+        
+            if(localStorage.getItem("editEmp") == null){    
+                $.ajax({
             type : "Post",
             contentType: "application/json",
             data : JSON.stringify({
@@ -62,14 +53,37 @@
                 "address" : address.value
             }),
             url: "http://localhost:3000/employee", 
-            success: function(result){
-            console.log(result);
-            window.location.replace("http://127.0.0.1:5500/html/Home.html");
+            success: function(){
+            window.location.replace("Home.html");
           },
-          error: function(xhr , status , error){
+          error: function(error){
             console.log(error);
           }   
         });
+        }
+        else
+        {
+            $.ajax({
+                type : "Patch",
+                contentType: "application/json",
+                data : JSON.stringify({
+                    "name" : document.getElementById('f-name').value,
+                    "department" : document.getElementById('deprt').value,
+                    "phoneNo" : document.getElementById('phoneno').value,
+                    "email" : document.getElementById('email').value,
+                    "address" : document.getElementById('address').value 
+                }),
+                url: "http://localhost:3000/employee/"+document.getElementById('empId').value, 
+                success: function(){
+                localStorage.clear();
+                window.location.replace("Home.html");
+              },
+              error: function(xhr , status , error){
+                console.log(error);
+              }   
+            });
+        }
+
     }
     }
 
@@ -125,4 +139,15 @@
     //     });
     // });
 
-    
+    function getEmpDataFromLocalStorage(){
+        if(localStorage.getItem("editEmp") != null)
+        {
+            let emp = JSON.parse(localStorage.getItem("editEmp"));
+            document.getElementById('empId').value = emp[0].id;
+            document.getElementById('f-name').value = emp[0].name;
+            document.getElementById('deprt').value = emp[0].department;
+            document.getElementById('phoneno').value = emp[0].phoneNo;
+            document.getElementById('email').value = emp[0].email;
+            document.getElementById('address').value = emp[0].address;
+        }
+    }
