@@ -25,6 +25,10 @@ h1{
     box-shadow: 5px 100px 118px #888888;
 }
 
+.form-content{
+    width: 500px;
+}
+
 .head{
     color:black;
     padding-bottom: 30px;
@@ -59,6 +63,7 @@ input{
     line-height: 1.5;
     border: 2px solid black;
     border-radius: 6px;
+    padding-left: 7px;
 }
 
 input:hover{
@@ -68,6 +73,7 @@ input:hover{
 .button{
     display: flex;
     justify-content: center;
+    align-items: center;
     padding-top: 20px;
     
 }
@@ -88,3 +94,37 @@ error-output {
     font-weight: bolder;
 
   }
+
+
+  @media screen and (max-width: 500px) {
+    .reg-frame{
+        width: 350px;
+        padding: 18px;
+    }   
+  }
+
+  @media screen and (max-width: 367px) {
+    .reg-frame{
+        width: 328px;
+    padding: 6px;
+    }   
+  }
+
+  @media screen and (max-width: 320px) {
+    .reg-frame{
+        width: 316px;
+    }  
+}
+
+@media screen and (max-width: 285px) {
+    
+    .reg-frame{
+        width: 276px;
+    }
+    
+    .button{
+    width: 200px;
+    margin-left: 39PX;
+    }
+
+}
