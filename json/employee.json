@@ -13,16 +13,8 @@
       "department": "Finance",
       "phoneNo": "09172103456",
       "email": "vishal@gmail.com",
-      "address": "Dhule",
-      "id": 5
-    },
-    {
-      "name": "Chandan",
-      "department": "Teaching",
-      "phoneNo": "09172103456",
-      "email": "chandan@gmail.com",
       "address": "Nasik",
-      "id": 6
+      "id": 5
     }
   ]
 }

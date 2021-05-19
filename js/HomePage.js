@@ -1,8 +1,7 @@
 var tableData = []
 
 $(document).ready(function(){
-    if (site_properties.from_local) getEmpDataFromLocalStorage();
-    else reload();
+    reload();
 });
 
 function reload(){
