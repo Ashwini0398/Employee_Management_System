@@ -2,9 +2,9 @@
     box-sizing: border-box;
 }
 body{
-    height: 93vh;
     padding: 21px 21px 0px 21px;
-    margin: 5px;
+    min-height: 100vh;
+    margin: 0px;
 }
 header{
     padding: 12px;
@@ -73,7 +73,8 @@ img{
 .plus-img{
     background-color: black;
     width: 15%;
-    margin-right: 24px;
+    margin-right: 6px;
+    margin-top: 9px;
 }
 
 .main-content{
@@ -193,4 +194,66 @@ input:hover{
     border-radius: 3px;
     background-color: rgb(127, 238, 160);
     border: 1px solid #635757;
+}
+
+.update{
+margin-left: 13px;
+}
+
+@media screen and (max-width: 780px) {
+    
+    .table{
+        overflow-x: scroll;
+        overflow-y: scroll;
+        display: flex;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 487px) {
+    
+    .employee-details {
+        font-size: 23px;
+        font-weight: bold;
+    }
+
+    .plus-img {
+        margin-top: 2px;
+}
+}
+@media screen and (max-width: 410px) {
+    
+    .employee-details {
+        font-size: 20px;
+    }
+
+    .add-button {
+        font-size: 20px;
+}
+}
+
+@media screen and (max-width: 377px) {
+    
+    .employee-details {
+        font-size: 15px;
+    }
+
+    .add-button {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 282px) {
+    
+    .employee-details {
+        font-size: 11px;
+    }
+
+    .add-button {
+        font-size: 12px;
+    }
+    .plus-img {
+        margin-right: 2px;
+}
+    
 }

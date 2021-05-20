@@ -3,18 +3,82 @@
     {
       "id": 1,
       "name": "Ashwini",
-      "department": "Teacher",
+      "department": "Developer",
       "phoneNo": "07698596877",
       "email": "ashwini1234@gmail.com",
-      "address": "Mumbai"
+      "address": "Nasik"
     },
     {
       "name": "Vishal",
-      "department": "Finance",
+      "department": "Doctor",
       "phoneNo": "09172103456",
       "email": "vishal@gmail.com",
       "address": "Nasik",
       "id": 5
+    },
+    {
+      "name": "Anjali",
+      "department": "Teacher",
+      "phoneNo": "09172103489",
+      "email": "anjali@gmail.com",
+      "address": "Neemach",
+      "id": 7
+    },
+    {
+      "name": "Mahender",
+      "department": "Finance",
+      "phoneNo": "09865456788",
+      "email": "mahenderkhonde1999@gmail.com",
+      "address": "Nardane",
+      "id": 9
+    },
+    {
+      "name": "Anjali",
+      "department": "Doctor",
+      "phoneNo": "08605532952",
+      "email": "anjali@gmail.com",
+      "address": "Mumbai",
+      "id": 10
+    },
+    {
+      "name": "Manju",
+      "department": "Sales",
+      "phoneNo": "09876556445",
+      "email": "manju@gmail.com",
+      "address": "Tirchy",
+      "id": 11
+    },
+    {
+      "name": "Rani",
+      "department": "Housewife",
+      "phoneNo": "09987654455",
+      "email": "rani@gmail.com",
+      "address": "Malegaoun",
+      "id": 12
+    },
+    {
+      "name": "Rahul",
+      "department": "Artist",
+      "phoneNo": "09987655656",
+      "email": "rahul@gmail.com",
+      "address": "Pune",
+      "id": 13
+    },
+    {
+      "name": "Ashish",
+      "department": "Doctor",
+      "phoneNo": "09877655656",
+      "email": "ashish@gmail.com",
+      "address": "Nagpur",
+      "id": 14
+    },
+    {
+      "name": "Mayur",
+      "department": "Manager",
+      "phoneNo": "09876543234",
+      "email": "mayur05@gmail.com",
+      "address": "Chennai",
+      "id": 15
     }
   ]
 }

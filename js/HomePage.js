@@ -2,6 +2,7 @@ var tableData = []
 
 $(document).ready(function(){
     reload();
+   
 });
 
 function reload(){
@@ -35,8 +36,8 @@ const createInnerHtml = () => {
       <td>
           <img id="${employeePayrollData.id}" onclick="remove(this)" alt="delete"
           src="../assests/asserts/assets/icons/delete-black-18dp.svg">
-          <img id="${employeePayrollData.id}" 
-            alt="edit" onclick="update(this)"
+          <img id="${employeePayrollData.id}" class ="update"
+            alt="edit" onclick="update(this) " 
           src="../assests/asserts/assets/icons/create-black-18dp.svg">
       </td>
       </tr>`;
@@ -68,6 +69,8 @@ const createInnerHtml = () => {
       localStorage.setItem('editEmp', JSON.stringify(empDtl));
       window.location.replace(site_properties.add_user_page);
 }
+
+
   function reload(){
     $.ajax({
         type : "Get",

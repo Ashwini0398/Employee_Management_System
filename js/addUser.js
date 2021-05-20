@@ -24,11 +24,20 @@
         "address" : address.value
     }
 
-    $(document).ready(function(){
+    $(document).ready(function(){ 
+        if(localStorage.getItem("editEmp") == null){  
+
+            document.getElementById("id01").innerHTML="Add User";
+
+        }else{
+            document.getElementById("id01").innerHTML="Update User";
+
+        }
         getEmpDataFromLocalStorage();
     });
 
       function onSubmit() {
+        
           console.log(addressError.textContent);
           validationMsg(addressRegex,address,addressError,"* please enter the address ");
           validationMsg(deptRegex,deprt,departmentError,"* please enter the department ");
@@ -53,6 +62,7 @@
                 "address" : address.value
             }),
             url: "http://localhost:3000/employee", 
+            
             success: function(){
             window.location.replace("Home.html");
           },
@@ -61,8 +71,7 @@
           }   
         });
         }
-        else
-        {
+        else{
             $.ajax({
                 type : "Patch",
                 contentType: "application/json",
@@ -77,6 +86,7 @@
                 success: function(){
                 localStorage.clear();
                 window.location.replace("Home.html");
+                
               },
               error: function(xhr , status , error){
                 console.log(error);
@@ -130,3 +140,5 @@
             document.getElementById('address').value = emp[0].address;
         }
     }
+
+    
